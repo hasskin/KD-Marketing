@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KD Marketing – SEO, Content &amp; Google-Maps-Marketing</title>
+<meta name="description" content="KD Marketing – Ihre Agentur für SEO, Content-Marketing und Sichtbarkeit auf Google Maps. Mehr Anfragen, mehr Kunden, messbare Ergebnisse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e0e0e;
+  --ink-soft:#5b616e;
+  --paper:#ffffff;
+  --paper-soft:#f7f8fc;
+  --line:rgba(14,14,14,.09);
+  --blue:#3d5eff;
+  --violet:#9763ff;
+  --grad:linear-gradient(112deg,#3d5eff 0%,#9763ff 100%);
+  --grad-text:linear-gradient(135deg,#5975ff,#c084fc 55%,#9763ff);
+  --dark:#0e0e0e;
+  --dark-card:#17171c;
+  --dark-line:rgba(255,255,255,.09);
+  --radius:20px;
+  --font:'Onest',system-ui,sans-serif;
+  --mono:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(151,99,255,.25)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.logo-mark{
+  width:38px;height:38px;border-radius:12px;
+  background:var(--grad);
+  color:#fff;display:grid;place-items:center;
+  font-size:15px;font-weight:800;
+  box-shadow:0 6px 18px rgba(97,94,255,.35);
+}
+.nav-links{display:flex;gap:32px;font-weight:600;font-size:15px;color:var(--ink-soft)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--ink);color:#fff;
+  font-weight:700;font-size:15px;font-family:var(--font);
+  padding:13px 26px;border-radius:14px;
+  transition:transform .2s,box-shadow .2s,filter .2s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(14,14,14,.22)}
+.btn.grad{
+  background:var(--grad);
+  box-shadow:0 8px 24px rgba(97,94,255,.38);
+}
+.btn.grad:hover{filter:brightness(1.07);box-shadow:0 12px 30px rgba(97,94,255,.48)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(14,14,14,.16);box-shadow:none}
+.btn.ghost:hover{border-color:rgba(14,14,14,.35);box-shadow:0 8px 20px rgba(14,14,14,.08)}
+
+/* ---------- eyebrow pill ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);
+  font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);
+  background:#fff;
+  border:1px solid var(--line);
+  padding:8px 18px;border-radius:999px;
+  box-shadow:0 2px 10px rgba(14,14,14,.05);
+}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--grad);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:92px 0 80px;text-align:center}
+.hero-glow{
+  position:absolute;left:50%;top:-260px;transform:translateX(-50%);
+  width:1100px;height:800px;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(89,117,255,.28),rgba(151,99,255,.14) 50%,rgba(255,255,255,0) 80%);
+}
+.hero .wrap{position:relative}
+h1{
+  font-weight:800;font-size:clamp(38px,5.8vw,66px);
+  line-height:1.08;letter-spacing:-.03em;
+  max-width:900px;margin:28px auto 0;
+}
+h1 .hl{
+  background:var(--grad-text);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{
+  margin:24px auto 38px;font-size:18.5px;color:var(--ink-soft);max-width:640px;
+}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;align-items:center}
+.hero-note{margin-top:18px;font-size:14px;color:var(--ink-soft)}
+.hero-note .ok{color:#16a34a;font-weight:700}
+
+/* ---------- dashboard mockup ---------- */
+.dash-wrap{position:relative;margin:64px auto 0;max-width:960px}
+.dash-wrap::before{
+  content:"";position:absolute;inset:-40px -60px;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(89,117,255,.22),rgba(151,99,255,.10) 55%,rgba(255,255,255,0) 80%);
+}
+.dash{
+  position:relative;text-align:left;
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  box-shadow:0 30px 80px rgba(56,56,120,.18),0 4px 16px rgba(56,56,120,.08);
+  overflow:hidden;
+}
+.dash-top{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 20px;border-bottom:1px solid var(--line);background:#fbfbfe;
+}
+.dots{display:flex;gap:6px}
+.dots i{width:11px;height:11px;border-radius:50%;background:#e4e4ec}
+.dots i:nth-child(1){background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.addr{
+  flex:1;max-width:420px;margin:0 auto;
+  font-family:var(--mono);font-size:12px;color:var(--ink-soft);
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:6px 14px;text-align:center;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.dash-body{display:grid;grid-template-columns:1.25fr 1fr;gap:0}
+.dash-col{padding:26px 28px}
+.dash-col.left{border-right:1px solid var(--line)}
+.dash-h{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.dash-h .chip{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;font-weight:500;
+  color:#fff;background:var(--grad);border-radius:999px;padding:3px 10px;text-transform:none;
+}
+.serp{display:flex;flex-direction:column;gap:10px}
+.serp-row{
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--line);border-radius:14px;padding:12px 16px;
+  background:#fff;
+}
+.serp-row.win{
+  border-color:transparent;
+  background:linear-gradient(112deg,rgba(61,94,255,.09),rgba(151,99,255,.09));
+  outline:1.5px solid rgba(97,94,255,.45);
+}
+.pos{
+  width:30px;height:30px;border-radius:9px;flex:0 0 30px;
+  display:grid;place-items:center;font-weight:800;font-size:14px;
+  background:#f0f1f7;color:var(--ink-soft);
+}
+.serp-row.win .pos{background:var(--grad);color:#fff;box-shadow:0 4px 12px rgba(97,94,255,.4)}
+.serp-txt{min-width:0;flex:1}
+.serp-txt b{display:block;font-size:14px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.serp-txt span{font-size:12px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.bar-ghost{height:9px;border-radius:5px;background:#eef0f6}
+.serp-row .up{
+  font-family:var(--mono);font-size:11.5px;font-weight:600;color:#16a34a;
+  background:rgba(22,163,74,.1);border-radius:999px;padding:3px 9px;white-space:nowrap;
+}
+.map-card{
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:20px;
+}
+.map-vis{
+  position:relative;height:104px;
+  background:
+    radial-gradient(circle at 65% 45%,rgba(151,99,255,.16),transparent 55%),
+    linear-gradient(#f2f4fa,#f2f4fa);
+}
+.map-vis::before,.map-vis::after{
+  content:"";position:absolute;background:#e3e6f0;
+}
+.map-vis::before{left:0;right:0;top:46px;height:10px;transform:rotate(-6deg)}
+.map-vis::after{top:0;bottom:0;left:58%;width:10px;transform:rotate(14deg)}
+.pin{
+  position:absolute;left:58%;top:34px;width:34px;height:34px;z-index:1;
+  transform:translateX(-50%);
+  background:var(--grad);border-radius:50% 50% 50% 0;
+  rotate:-45deg;
+  box-shadow:0 8px 18px rgba(97,94,255,.45);
+}
+.pin::after{
+  content:"";position:absolute;inset:9px;background:#fff;border-radius:50%;
+}
+.map-meta{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff}
+.map-meta b{font-size:14px}
+.stars{font-size:12px;color:#f59e0b;letter-spacing:2px}
+.map-meta .up{font-family:var(--mono);font-size:11.5px;font-weight:600;color:#16a34a;background:rgba(22,163,74,.1);border-radius:999px;padding:3px 9px}
+.traffic{border:1px solid var(--line);border-radius:14px;padding:16px}
+.traffic-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.traffic-head b{font-size:14px}
+.traffic-head span{font-family:var(--mono);font-size:11.5px;font-weight:600;color:#16a34a}
+.tbars{display:flex;align-items:flex-end;gap:7px;height:88px}
+.tbars i{
+  flex:1;border-radius:6px 6px 3px 3px;
+  background:linear-gradient(180deg,#8aa0ff,#5975ff);
+  animation:grow 1s cubic-bezier(.2,.8,.2,1) both;
+  transform-origin:bottom;
+}
+.tbars i:nth-child(1){height:26%;opacity:.4;animation-delay:.05s}
+.tbars i:nth-child(2){height:34%;opacity:.5;animation-delay:.1s}
+.tbars i:nth-child(3){height:30%;opacity:.5;animation-delay:.15s}
+.tbars i:nth-child(4){height:46%;opacity:.65;animation-delay:.2s}
+.tbars i:nth-child(5){height:56%;opacity:.75;animation-delay:.25s}
+.tbars i:nth-child(6){height:66%;opacity:.85;animation-delay:.3s}
+.tbars i:nth-child(7){height:80%;opacity:.95;animation-delay:.35s}
+.tbars i:nth-child(8){height:100%;background:var(--grad);animation-delay:.4s}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+h2{
+  font-weight:800;
+  font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.025em;
+  margin-top:22px;
+}
+h2 .hl{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:17px}
+
+/* ---------- services ---------- */
+#leistungen{background:var(--paper-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px 28px;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 44px rgba(56,56,120,.12);
+  border-color:rgba(97,94,255,.35);
+}
+.card .icon{
+  width:50px;height:50px;border-radius:14px;margin-bottom:20px;
+  display:grid;place-items:center;
+  background:linear-gradient(112deg,rgba(61,94,255,.1),rgba(151,99,255,.12));
+  color:var(--blue);
+}
+.card .icon svg{width:25px;height:25px}
+.card h3{font-size:18.5px;font-weight:800;margin-bottom:9px;letter-spacing:-.015em}
+.card p{font-size:14.5px;color:var(--ink-soft)}
+.card.feature{
+  background:var(--grad);
+  border-color:transparent;color:#fff;
+  position:relative;overflow:hidden;
+  box-shadow:0 18px 44px rgba(97,94,255,.35);
+}
+.card.feature::after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(255,255,255,.16);filter:blur(60px);top:-100px;right:-80px;
+}
+.card.feature .icon{background:rgba(255,255,255,.18);color:#fff}
+.card.feature p{color:rgba(255,255,255,.85)}
+.card.feature .tag{
+  position:absolute;top:20px;right:20px;z-index:1;
+  font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  background:#fff;color:var(--blue);padding:5px 12px;border-radius:999px;
+}
+
+/* ---------- process (dark) ---------- */
+.process{background:var(--dark);color:#fff}
+.process .eyebrow{background:rgba(255,255,255,.04);border-color:var(--dark-line);color:rgba(255,255,255,.6)}
+.process .sec-head p{color:rgba(255,255,255,.6)}
+.steps{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.step{
+  position:relative;display:flex;gap:24px;padding:0 0 40px;
+}
+.step:last-child{padding-bottom:0}
+.step-marker{
+  flex:0 0 44px;width:44px;height:44px;border-radius:13px;
+  display:grid;place-items:center;
+  font-family:var(--mono);font-weight:600;font-size:15px;
+  background:linear-gradient(112deg,rgba(61,94,255,.2),rgba(151,99,255,.2));
+  border:1px solid rgba(151,99,255,.4);color:#c084fc;
+}
+.step:not(:last-child) .step-line{
+  position:absolute;left:21.5px;top:52px;bottom:10px;width:1.5px;
+  background:linear-gradient(180deg,rgba(151,99,255,.5),rgba(151,99,255,.08));
+}
+.step-card{
+  flex:1;background:var(--dark-card);border:1px solid var(--dark-line);
+  border-radius:16px;padding:24px 26px;
+}
+.step-card .stag{
+  display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:#c084fc;background:rgba(151,99,255,.12);border:1px solid rgba(151,99,255,.28);
+  border-radius:999px;padding:4px 11px;margin-bottom:12px;
+}
+.step-card h3{font-size:18px;font-weight:800;margin-bottom:8px;letter-spacing:-.01em}
+.step-card p{font-size:14.5px;color:rgba(255,255,255,.62)}
+.step-card .foot{
+  margin-top:14px;padding-top:13px;border-top:1px solid var(--dark-line);
+  font-family:var(--mono);font-size:11.5px;color:#7ee2a0;
+}
+
+/* ---------- why ---------- */
+.why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.why-grid .eyebrow{margin-bottom:0}
+.why-grid h2{text-align:left}
+.why-list{display:flex;flex-direction:column;gap:6px;margin-top:30px}
+.why-item{display:flex;gap:16px;padding:16px 18px;border-radius:16px;transition:background .2s}
+.why-item:hover{background:var(--paper-soft)}
+.check{
+  flex:0 0 26px;width:26px;height:26px;border-radius:50%;margin-top:2px;
+  background:var(--grad);display:grid;place-items:center;
+  box-shadow:0 4px 10px rgba(97,94,255,.35);
+}
+.check svg{width:12px;height:12px;stroke:#fff;stroke-width:3.2;fill:none}
+.why-item b{display:block;font-size:15.5px;margin-bottom:2px;letter-spacing:-.01em}
+.why-item span{font-size:14px;color:var(--ink-soft)}
+.why-visual{
+  position:relative;border-radius:24px;overflow:hidden;
+  background:var(--dark);
+  padding:40px 36px;color:#fff;min-height:420px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  border:1px solid rgba(255,255,255,.06);
+}
+.why-visual::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 80% 12%,rgba(61,94,255,.5),transparent 55%),
+    radial-gradient(circle at 12% 88%,rgba(151,99,255,.35),transparent 50%);
+}
+.chart{position:relative;display:flex;align-items:flex-end;gap:13px;height:190px;margin-bottom:32px}
+.bar{
+  flex:1;border-radius:10px 10px 4px 4px;
+  background:linear-gradient(180deg,#8aa0ff,#3d5eff);
+  animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both;
+  transform-origin:bottom;
+}
+.bar:nth-child(1){height:30%;animation-delay:.05s;opacity:.45}
+.bar:nth-child(2){height:42%;animation-delay:.15s;opacity:.6}
+.bar:nth-child(3){height:57%;animation-delay:.25s;opacity:.75}
+.bar:nth-child(4){height:74%;animation-delay:.35s;opacity:.9}
+.bar:nth-child(5){height:96%;animation-delay:.45s;background:linear-gradient(180deg,#c084fc,#9763ff)}
+.why-visual figcaption{position:relative;font-size:14.5px;color:rgba(255,255,255,.65)}
+.why-visual figcaption b{color:#fff;font-size:21px;font-weight:800;letter-spacing:-.015em;display:block;margin-bottom:6px}
+
+/* ---------- cta ---------- */
+.cta-band{padding:0 0 110px}
+.cta-inner{
+  position:relative;overflow:hidden;border-radius:28px;
+  background:var(--grad);
+  color:#fff;text-align:center;padding:84px 32px;
+  box-shadow:0 30px 70px rgba(97,94,255,.35);
+}
+.cta-inner::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 70% 0%,rgba(255,255,255,.25),transparent 45%);
+}
+.cta-inner h2{position:relative;color:#fff;max-width:640px;margin:0 auto}
+.cta-inner p{position:relative;margin:18px auto 38px;max-width:480px;color:rgba(255,255,255,.88);font-size:17px}
+.btn.light{position:relative;background:#fff;color:var(--ink);font-size:16px;padding:16px 34px;border-radius:16px}
+.btn.light:hover{box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.cta-actions{position:relative;display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
+.mail-chip{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:14px;color:#fff;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);
+  border-radius:16px;padding:15px 22px;cursor:pointer;
+  transition:background .2s,transform .2s;
+}
+.mail-chip:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.mail-chip svg{width:17px;height:17px;flex:0 0 17px}
+.mail-chip .mail-hint{
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(255,255,255,.75);
+  border-left:1px solid rgba(255,255,255,.35);padding-left:10px;
+}
+.mail-chip.copied{background:rgba(22,163,74,.35);border-color:rgba(255,255,255,.5)}
+@media(max-width:600px){
+  .mail-chip{padding:13px 16px;font-size:12.5px}
+}
+.cta-note{position:relative;margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.75)}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark);color:rgba(255,255,255,.55);padding:44px 0;font-size:14px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .logo{font-size:16px;color:#fff}
+.foot .logo-mark{width:30px;height:30px;border-radius:9px;font-size:12px}
+.foot-links{display:flex;gap:24px;font-weight:600}
+.foot-links a:hover{color:#fff}
+
+/* ---------- reveal (only when JS is running — content stays visible otherwise) ---------- */
+html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+html.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr;gap:44px}
+  .nav-links{display:none}
+  .dash-body{grid-template-columns:1fr}
+  .dash-col.left{border-right:none;border-bottom:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .hero{padding:70px 0 60px}
+  .nav{height:64px}
+  .logo{font-size:16px;gap:9px}
+  .logo-mark{width:32px;height:32px;border-radius:9px;font-size:13px}
+  .nav .btn{padding:10px 16px;font-size:13px;white-space:nowrap}
+  .step{gap:14px}
+  .step-marker{flex-basis:36px;width:36px;height:36px;border-radius:10px;font-size:13px}
+  .step:not(:last-child) .step-line{left:17.5px;top:44px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark">KD</span>
+      KD&nbsp;Marketing
+    </a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#warum">Warum wir</a>
+    </nav>
+    <a class="btn grad" href="#kontakt">Kostenlose Analyse <span class="arr">→</span></a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Digital-Marketing-Agentur</div>
+    <h1>Mehr Sichtbarkeit. Mehr Kunden. <span class="hl">Messbar mehr Umsatz.</span></h1>
+    <p class="lead">KD Marketing bringt Ihr Unternehmen dorthin, wo Ihre Kunden suchen: ganz nach oben bei Google, Google Maps und in den KI-Suchergebnissen von morgen.</p>
+    <div class="hero-cta">
+      <a class="btn grad" href="#kontakt">Jetzt Projekt anfragen <span class="arr">→</span></a>
+      <a class="btn ghost" href="#leistungen">Leistungen ansehen</a>
+    </div>
+    <div class="hero-note"><span class="ok">✓</span> Erstanalyse kostenlos · unverbindlich · Antwort in 24&nbsp;h</div>
+
+    <div class="dash-wrap">
+      <div class="dash" role="img" aria-label="Beispiel-Dashboard: Platz 1 bei Google, Top-Platzierung auf Google Maps, wachsender Traffic">
+        <div class="dash-top">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="addr">google.de/search?q=ihre+branche+ihre+stadt</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-col left">
+            <div class="dash-h">Google-Rankings <span class="chip">live</span></div>
+            <div class="serp">
+              <div class="serp-row win">
+                <span class="pos">1</span>
+                <span class="serp-txt"><b>Ihr Unternehmen</b><span>ihre-website.de – Platz 1 für Ihr wichtigstes Keyword</span></span>
+                <span class="up">▲ +8</span>
+              </div>
+              <div class="serp-row">
+                <span class="pos">2</span>
+                <span class="serp-txt"><div class="bar-ghost" style="width:64%;margin-bottom:7px"></div><div class="bar-ghost" style="width:86%"></div></span>
+              </div>
+              <div class="serp-row">
+                <span class="pos">3</span>
+                <span class="serp-txt"><div class="bar-ghost" style="width:52%;margin-bottom:7px"></div><div class="bar-ghost" style="width:78%"></div></span>
+              </div>
+              <div class="serp-row">
+                <span class="pos">4</span>
+                <span class="serp-txt"><div class="bar-ghost" style="width:58%;margin-bottom:7px"></div><div class="bar-ghost" style="width:70%"></div></span>
+              </div>
+            </div>
+          </div>
+          <div class="dash-col">
+            <div class="dash-h">Google Maps</div>
+            <div class="map-card">
+              <div class="map-vis"><span class="pin"></span></div>
+              <div class="map-meta">
+                <span><b>Ihr Unternehmen</b><br><span class="stars">★★★★★</span></span>
+                <span class="up">Top 3</span>
+              </div>
+            </div>
+            <div class="traffic">
+              <div class="traffic-head"><b>Besucher / Monat</b><span>+214 %</span></div>
+              <div class="tbars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leistungen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="dot"></span> Leistungen</div>
+      <h2>Alles aus einer Hand – vom Ranking <span class="hl">bis zur Anfrage.</span></h2>
+      <p>Wir übernehmen das komplette Online-Marketing. Unsere Schwerpunkte: Suchmaschinen, Inhalte und lokale Sichtbarkeit.</p>
+    </div>
+    <div class="grid">
+      <div class="card feature reveal">
+        <span class="tag">Kernkompetenz</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <h3>SEO – Suchmaschinen&shy;optimierung</h3>
+        <p>Technik, Inhalte, Backlinks: Wir bringen Ihre Website nachhaltig auf die vorderen Plätze – dort, wo geklickt wird.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Google Maps &amp; Local SEO</h3>
+        <p>Google-Unternehmensprofil, Bewertungen, lokale Rankings: Wir machen Sie zur ersten Wahl in Ihrer Stadt.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+        <h3>Content-Marketing</h3>
+        <p>Texte, die ranken und verkaufen: Landingpages, Blogartikel und Kategorietexte – strategisch geplant, sauber umgesetzt.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h3a4 4 0 0 1 4 4v1h-2v-1a2 2 0 0 0-2-2h-3v2.6c1.2.6 2 1.9 2 3.4a4 4 0 1 1-8 0c0-1.5.8-2.8 2-3.4V13H7a2 2 0 0 0-2 2v1H3v-1a4 4 0 0 1 4-4h3V9.4C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4Z"/></svg></div>
+        <h3>KI-SEO / AI-Suche</h3>
+        <p>ChatGPT, Perplexity &amp; Google AI Overviews: Wir optimieren Ihre Inhalte so, dass KI-Assistenten Sie empfehlen.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <h3>Google Ads</h3>
+        <p>Sofort sichtbare Ergebnisse mit bezahlten Kampagnen – effizient ausgesteuert, ohne Budget zu verbrennen.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+        <h3>Websites &amp; Landingpages</h3>
+        <p>Schnelle, konversionsstarke Seiten – technisch sauber, SEO-ready und auf jedem Gerät ein Hingucker.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="dot"></span> Ablauf</div>
+      <h2>In drei Schritten zu <span class="hl">mehr Anfragen.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-marker">A</span><span class="step-line"></span>
+        <div class="step-card">
+          <span class="stag">Start</span>
+          <h3>Analyse &amp; Potenzial</h3>
+          <p>Wir prüfen Ihre Website, Ihre Rankings und Ihren Wettbewerb – und zeigen Ihnen ehrlich, wo das größte Potenzial liegt.</p>
+          <div class="foot">Ergebnis: kostenloser Audit-Report mit Prioritäten</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-marker">B</span><span class="step-line"></span>
+        <div class="step-card">
+          <span class="stag">Planung</span>
+          <h3>Strategie &amp; Fahrplan</h3>
+          <p>Sie erhalten einen klaren Maßnahmenplan mit Prioritäten, Zeitrahmen und realistischen Zielen. Keine Buzzwords, keine Blackbox.</p>
+          <div class="foot">Ergebnis: Maßnahmenplan mit Zeitrahmen &amp; Zielen</div>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-marker">C</span>
+        <div class="step-card">
+          <span class="stag">Laufend</span>
+          <h3>Umsetzung &amp; Reporting</h3>
+          <p>Wir setzen um, messen und optimieren laufend. Jeden Monat sehen Sie schwarz auf weiß, was sich verbessert hat.</p>
+          <div class="foot">Ergebnis: monatlicher Report – Rankings → Besucher → Anfragen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="warum">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span> Warum KD Marketing</div>
+      <h2>Wir reden nicht über Reichweite. <span class="hl">Wir liefern Anfragen.</span></h2>
+      <div class="why-list">
+        <div class="why-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Praxis statt Theorie</b><span>Wir betreiben eigene Projekte, die in umkämpften Märkten ranken – wir wissen, was wirklich funktioniert.</span></div>
+        </div>
+        <div class="why-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Direkter Draht</b><span>Kein Ticketsystem, kein Callcenter: Sie sprechen direkt mit den Menschen, die Ihr Projekt umsetzen.</span></div>
+        </div>
+        <div class="why-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Volle Transparenz</b><span>Monatliche Reports mit echten Kennzahlen: Rankings, Besucher, Anrufe, Anfragen. Sie sehen jederzeit, was Ihr Budget leistet.</span></div>
+        </div>
+        <div class="why-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Faire Konditionen</b><span>Monatlich kündbar. Wir überzeugen mit Ergebnissen – nicht mit Knebelverträgen.</span></div>
+        </div>
+      </div>
+    </div>
+    <figure class="why-visual reveal">
+      <div class="chart" aria-hidden="true">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <figcaption><b>Sichtbarkeit, die wächst.</b>Kontinuierlicher Aufbau statt kurzfristiger Tricks – so entsteht organischer Traffic, der bleibt.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="cta-band" id="kontakt">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <h2>Bereit für Seite&nbsp;1?</h2>
+      <p>Fordern Sie jetzt Ihre kostenlose Erstanalyse an – wir zeigen Ihnen unverbindlich, wo Sie stehen und was möglich ist.</p>
+      <div class="cta-actions">
+        <a class="btn light" href="mailto:kdmarketingug@gmail.com?subject=Anfrage%20kostenlose%20Analyse">Kostenlose Analyse anfordern <span class="arr">→</span></a>
+        <button class="mail-chip" type="button" id="mail-copy" title="Klicken zum Kopieren">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></svg>
+          <span class="mail-addr">kdmarketingug@gmail.com</span>
+          <span class="mail-hint">kopieren</span>
+        </button>
+      </div>
+      <div class="cta-note">Antwort innerhalb von 24 Stunden · unverbindlich · kostenlos</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="#top"><span class="logo-mark">KD</span> KD&nbsp;Marketing</a>
+    <div class="foot-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+    <div>© 2026 KD Marketing</div>
+  </div>
+</footer>
+
+<script>
+// copy email to clipboard (mailto errors when no mail client is set up)
+const chip=document.getElementById('mail-copy');
+if(chip){
+  chip.addEventListener('click',()=>{
+    const addr=chip.querySelector('.mail-addr').textContent.trim();
+    const done=()=>{
+      chip.classList.add('copied');
+      chip.querySelector('.mail-hint').textContent='kopiert ✓';
+      setTimeout(()=>{chip.classList.remove('copied');chip.querySelector('.mail-hint').textContent='kopieren'},2000);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(addr).then(done).catch(()=>{prompt('E-Mail-Adresse kopieren:',addr)});
+    }else{
+      prompt('E-Mail-Adresse kopieren:',addr);
+    }
+  });
+}
+if('IntersectionObserver' in window && !document.hidden){
+  document.documentElement.classList.add('js');
+  // reveal + safety net: if the transition never paints (frozen/background tab), drop it
+  const show=el=>{
+    if(el.classList.contains('in'))return;
+    el.classList.add('in');
+    setTimeout(()=>{if(getComputedStyle(el).opacity!=='1')el.style.transition='none'},900);
+  };
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // fallback in case the observer never fires: reveal whatever is in the viewport
+  let tick=false;
+  const sweep=()=>{
+    tick=false;
+    document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.top<innerHeight&&r.bottom>0)show(el);
+    });
+  };
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(sweep)}},{passive:true});
+  setTimeout(sweep,600);
+}
+</script>
+</body>
+</html>
