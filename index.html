@@ -25,6 +25,9 @@
 <script type="application/ld+json" id="kd-localbusiness">
 {"@context":"https:\/\/schema.org","@type":"ProfessionalService","@id":"https:\/\/kd-marketing.com\/#organization","name":"KD Marketing UG (haftungsbeschränkt)","alternateName":"KD Marketing","url":"https:\/\/kd-marketing.com\/","logo":"https:\/\/kd-marketing.com\/apple-touch-icon.png","image":"https:\/\/kd-marketing.com\/og-image.png","description":"Digital-Marketing-Agentur für SEO, Content-Marketing, Google Maps \/ Local SEO, KI-SEO, Google Ads und Websites. Kostenlose Erstanalyse, monatlich kündbar, transparentes Reporting.","email":"kdmarketingug@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Aldeinerstraße 2","postalCode":"86368","addressLocality":"Gersthofen","addressCountry":"DE"},"founder":{"@type":"Person","name":"Ekaterina Dmitrieva"},"areaServed":"DE","priceRange":"€€","knowsAbout":["SEO","Suchmaschinenoptimierung","Local SEO","Google Maps Marketing","Content-Marketing","KI-SEO","Google Ads","Webdesign"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Leistungen","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO – Suchmaschinenoptimierung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Maps & Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Content-Marketing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"KI-SEO \/ AI-Suche"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Websites & Landingpages"}}]}}
 </script>
+<script type="application/ld+json" id="kd-faq-schema">
+{"@context":"https:\/\/schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was kostet die Zusammenarbeit mit KD Marketing?","acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Umfang ab – eine lokale Google-Maps-Optimierung kostet weniger als eine komplette SEO-Betreuung mit Content. Sie erhalten vorab ein transparentes Festpreis-Angebot ohne versteckte Extras, die Zusammenarbeit ist monatlich kündbar. Die Erstanalyse ist immer kostenlos."}},{"@type":"Question","name":"Wie schnell sehe ich Ergebnisse?","acceptedAnswer":{"@type":"Answer","text":"Bei Google Maps und Local SEO oft schon nach wenigen Wochen, bei klassischem SEO meist nach 3–6 Monaten – nachhaltige Rankings brauchen Zeit. Google Ads liefern sofort Sichtbarkeit."}},{"@type":"Question","name":"Gibt es lange Vertragslaufzeiten?","acceptedAnswer":{"@type":"Answer","text":"Nein. Die Verträge von KD Marketing sind monatlich kündbar."}},{"@type":"Question","name":"Für wen arbeitet KD Marketing?","acceptedAnswer":{"@type":"Answer","text":"Vor allem für kleine und mittlere Unternehmen in Deutschland: Praxen, Kanzleien, Handwerksbetriebe, lokale Dienstleister und Online-Unternehmen."}},{"@type":"Question","name":"Was steht im monatlichen Report?","acceptedAnswer":{"@type":"Answer","text":"Echte Kennzahlen: Rankings, Besucherzahlen, Anrufe und Anfragen – und die konkret umgesetzten Maßnahmen des Monats."}},{"@type":"Question","name":"Was beinhaltet die kostenlose Erstanalyse?","acceptedAnswer":{"@type":"Answer","text":"Prüfung von Website, Google-Rankings, Google-Unternehmensprofil und Wettbewerb. Ergebnis ist ein Audit-Report mit klaren Prioritäten – unverbindlich und kostenlos, Antwort innerhalb von 24 Stunden."}}]}
+</script>
 <style>
 :root{
   --ink:#0e0e0e;
@@ -413,6 +416,56 @@ h2 .hl{background:var(--grad-text);-webkit-background-clip:text;background-clip:
 .why-visual figcaption{position:relative;font-size:14.5px;color:rgba(255,255,255,.65)}
 .why-visual figcaption b{color:#fff;font-size:21px;font-weight:800;letter-spacing:-.015em;display:block;margin-bottom:6px}
 
+/* ---------- availability badge ---------- */
+.avail{
+  position:absolute;top:-16px;right:22px;z-index:2;
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:9px 16px;font-size:13px;font-weight:700;letter-spacing:-.01em;
+  box-shadow:0 10px 26px rgba(56,56,120,.16);
+  transform:rotate(2deg);
+}
+.avail .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.5);animation:availpulse 1.8s infinite}
+@keyframes availpulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+
+/* ---------- vergleich (wir vs. andere) ---------- */
+#vergleich{background:var(--paper-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.vs-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;position:relative}
+.vs-card.win{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;box-shadow:0 18px 44px rgba(97,94,255,.14)}
+.vs-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}
+.vs-head b{font-size:19px;letter-spacing:-.015em}
+.vs-tag{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:5px 12px;white-space:nowrap}
+.vs-card.win .vs-tag{background:var(--grad);color:#fff}
+.vs-card:not(.win) .vs-tag{background:#eef0f6;color:var(--ink-soft)}
+.vs-row{display:flex;gap:13px;padding:12px 0;border-top:1px solid var(--line)}
+.vs-row i{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;margin-top:2px;font-style:normal}
+.vs-card.win .vs-row i{background:var(--grad);box-shadow:0 3px 8px rgba(97,94,255,.3)}
+.vs-card.win .vs-row i svg{width:11px;height:11px;stroke:#fff;stroke-width:3.4;fill:none}
+.vs-card:not(.win) .vs-row i{background:#eef0f6}
+.vs-card:not(.win) .vs-row i svg{width:10px;height:10px;stroke:#9aa0ab;stroke-width:3;fill:none}
+.vs-row b{display:block;font-size:15px;letter-spacing:-.01em}
+.vs-row span{font-size:13.5px;color:var(--ink-soft)}
+.vs-card:not(.win){opacity:.85}
+.vs-card:not(.win) .vs-row b{color:#6b7280}
+
+/* ---------- faq ---------- */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:22px 2px;font-size:17.5px;font-weight:800;letter-spacing:-.015em;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .fx{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;
+  border:1.5px solid rgba(14,14,14,.16);display:grid;place-items:center;
+  font-weight:600;font-size:19px;color:var(--ink-soft);
+  transition:transform .25s,background .25s,color .25s,border-color .25s;
+}
+.faq-item[open] summary .fx{transform:rotate(45deg);background:var(--grad);color:#fff;border-color:transparent}
+.faq-item .faq-a{padding:0 46px 22px 2px;color:var(--ink-soft);font-size:15.5px}
+
 /* ---------- cta ---------- */
 .cta-band{padding:0 0 110px}
 .cta-inner{
@@ -471,6 +524,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .why-grid{grid-template-columns:1fr;gap:44px}
   .wd-grid{grid-template-columns:1fr;gap:52px}
   .wd-visual{min-height:0;margin-bottom:20px}
+  .vs-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .dash-body{grid-template-columns:1fr}
   .dash-col.left{border-right:none;border-bottom:1px solid var(--line)}
@@ -511,6 +565,10 @@ html.js .reveal.in{opacity:1;transform:none}
   .wd-item{text-align:left}
   .wd-browser{margin-right:36px}
   .wd-phone{width:108px;bottom:-20px}
+  .avail{top:-14px;right:10px;padding:7px 13px;font-size:12px}
+  .vs-card{padding:24px 20px}
+  .faq-item summary{font-size:16px;padding:18px 2px}
+  .faq-item .faq-a{padding-right:8px}
   .why-grid .eyebrow{margin-left:auto;margin-right:auto}
   .why-item{text-align:left}
   .why-visual{padding:28px 22px;min-height:340px}
@@ -534,6 +592,7 @@ html.js .reveal.in{opacity:1;transform:none}
       <a href="#webdesign">Webdesign</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#warum">Warum wir</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a class="btn grad" href="#kontakt">Kostenlose Analyse <span class="arr">→</span></a>
   </div>
@@ -552,6 +611,7 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="hero-note"><span class="ok">✓</span> Erstanalyse kostenlos · unverbindlich · Antwort in 24&nbsp;h</div>
 
     <div class="dash-wrap">
+      <div class="avail"><span class="dot"></span> Aktuell freie Projektplätze</div>
       <div class="dash" role="img" aria-label="Beispiel-Dashboard: Platz 1 bei Google, Top-Platzierung auf Google Maps, wachsender Traffic">
         <div class="dash-top">
           <div class="dots"><i></i><i></i><i></i></div>
@@ -765,6 +825,69 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
+<section id="vergleich">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="dot"></span> Im Vergleich</div>
+      <h2>KD Marketing <span class="hl">vs. typische Agentur.</span></h2>
+      <p>Transparent und ehrlich – so unterscheiden wir uns.</p>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card win reveal">
+        <div class="vs-head"><b>KD Marketing</b><span class="vs-tag">So arbeiten wir</span></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Direkter Draht</b><span>Sie sprechen direkt mit den Menschen, die Ihr Projekt umsetzen.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Monatlich kündbar</b><span>Wir überzeugen mit Ergebnissen, nicht mit Vertragslaufzeiten.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Echte Kennzahlen</b><span>Reports mit Rankings, Besuchern, Anrufen und Anfragen.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Praxis statt Theorie</b><span>Eigene Projekte, die in umkämpften Märkten ranken.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Transparente Preise</b><span>Klare Leistungen, keine versteckten Extras.</span></div></div>
+      </div>
+      <div class="vs-card reveal">
+        <div class="vs-head"><b>Typische Agentur</b><span class="vs-tag">Branchen-Standard</span></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Ticketsystem</b><span>Wechselnde Ansprechpartner und lange Antwortzeiten.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>12–24 Monate Laufzeit</b><span>Lange Knebelverträge, Ausstieg kaum möglich.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Bunte PDF-Reports</b><span>Viele Seiten, wenig Aussage über echte Anfragen.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Theorie aus Lehrbüchern</b><span>Empfehlungen ohne eigene nachweisbare Erfolge.</span></div></div>
+        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Versteckte Kosten</b><span>Extras und Aufschläge nach Vertragsstart.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="dot"></span> FAQ</div>
+      <h2>Häufige Fragen – <span class="hl">ehrlich beantwortet.</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Was kostet die Zusammenarbeit mit KD Marketing?<span class="fx">+</span></summary>
+        <div class="faq-a">Das hängt vom Umfang ab – eine lokale Google-Maps-Optimierung kostet weniger als eine komplette SEO-Betreuung mit Content. Sie erhalten vorab ein transparentes Festpreis-Angebot ohne versteckte Extras, und die Zusammenarbeit ist monatlich kündbar. Die Erstanalyse ist immer kostenlos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie schnell sehe ich Ergebnisse?<span class="fx">+</span></summary>
+        <div class="faq-a">Ehrliche Antwort: Bei Google Maps und Local SEO oft schon nach wenigen Wochen, bei klassischem SEO meist nach 3–6 Monaten – nachhaltige Rankings brauchen Zeit. Google Ads liefern sofort Sichtbarkeit. Wer Ihnen „Platz 1 in 2 Wochen" verspricht, arbeitet mit Tricks, die Google früher oder später abstraft.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Gibt es lange Vertragslaufzeiten?<span class="fx">+</span></summary>
+        <div class="faq-a">Nein. Unsere Verträge sind monatlich kündbar. Wir sind überzeugt, dass Kunden bleiben sollen, weil die Ergebnisse stimmen – nicht weil ein Vertrag sie festhält.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Für wen arbeitet ihr?<span class="fx">+</span></summary>
+        <div class="faq-a">Vor allem für kleine und mittlere Unternehmen in Deutschland: Praxen, Kanzleien, Handwerksbetriebe, lokale Dienstleister und Online-Unternehmen – überall dort, wo Kunden über Google suchen.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was steht im monatlichen Report?<span class="fx">+</span></summary>
+        <div class="faq-a">Echte Kennzahlen statt bunter Grafiken: Ihre Rankings, Besucherzahlen, Anrufe und Anfragen – und was wir im Monat konkret umgesetzt haben. Sie sehen jederzeit, was Ihr Budget leistet.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was beinhaltet die kostenlose Erstanalyse?<span class="fx">+</span></summary>
+        <div class="faq-a">Wir prüfen Ihre Website, Ihre Google-Rankings, Ihr Google-Unternehmensprofil und Ihren Wettbewerb. Sie erhalten einen Audit-Report mit klaren Prioritäten – unverbindlich, kostenlos, Antwort innerhalb von 24 Stunden.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band" id="kontakt">
   <div class="wrap">
     <div class="cta-inner reveal">
@@ -789,6 +912,7 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="foot-links">
       <a href="#leistungen">Leistungen</a>
       <a href="#webdesign">Webdesign</a>
+      <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
       <a href="/impressum/">Impressum</a>
       <a href="/datenschutz/">Datenschutz</a>
