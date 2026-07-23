@@ -289,6 +289,51 @@ h2 .hl{background:var(--grad-text);-webkit-background-clip:text;background-clip:
   background:#fff;color:var(--blue);padding:5px 12px;border-radius:999px;
 }
 
+/* ---------- webdesign ---------- */
+#webdesign{overflow:hidden}
+.wd-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.wd-grid .eyebrow{margin-bottom:0}
+.wd-grid h2{text-align:left;margin-top:22px}
+.wd-grid .lead{margin:16px 0 26px;color:var(--ink-soft);font-size:16.5px}
+.wd-list{display:flex;flex-direction:column;gap:6px;margin-bottom:34px}
+.wd-item{display:flex;gap:14px;padding:10px 2px}
+.wd-item .check{flex:0 0 26px;width:26px;height:26px;border-radius:50%;margin-top:1px;background:var(--grad);display:grid;place-items:center;box-shadow:0 4px 10px rgba(97,94,255,.35)}
+.wd-item .check svg{width:12px;height:12px;stroke:#fff;stroke-width:3.2;fill:none}
+.wd-item b{font-size:15.5px;letter-spacing:-.01em}
+.wd-item span{display:block;font-size:14px;color:var(--ink-soft)}
+.wd-visual{position:relative;min-height:420px}
+.wd-visual::before{content:"";position:absolute;inset:-30px -40px;pointer-events:none;background:radial-gradient(closest-side,rgba(89,117,255,.2),rgba(151,99,255,.1) 55%,rgba(255,255,255,0) 80%)}
+.wd-browser{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;
+  box-shadow:0 24px 60px rgba(56,56,120,.16),0 4px 14px rgba(56,56,120,.07);
+  overflow:hidden;margin-right:56px;
+}
+.wd-top{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--line);background:#fbfbfe}
+.wd-top i{width:10px;height:10px;border-radius:50%;background:#e4e4ec}
+.wd-top i:nth-child(1){background:#ff5f57}.wd-top i:nth-child(2){background:#febc2e}.wd-top i:nth-child(3){background:#28c840}
+.wd-url{flex:1;max-width:230px;margin:0 auto;font-family:var(--mono);font-size:11px;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:7px;padding:4px 12px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wd-hero{padding:30px 28px 24px;background:linear-gradient(160deg,rgba(61,94,255,.07),rgba(151,99,255,.09));text-align:left}
+.wd-line{height:13px;border-radius:6px;background:#1c2030;margin-bottom:9px}
+.wd-line.thin{height:8px;background:#d9dce8;margin-bottom:7px}
+.wd-line.w40{width:40%}.wd-line.w55{width:55%}.wd-line.w60{width:60%}.wd-line.w70{width:70%}.wd-line.w80{width:80%}.wd-line.w90{width:90%}
+.wd-btn{display:inline-block;width:104px;height:26px;border-radius:999px;background:var(--grad);margin-top:12px;box-shadow:0 6px 14px rgba(97,94,255,.35)}
+.wd-cards{display:flex;gap:12px;padding:20px 28px 26px}
+.wd-cards i{flex:1;height:64px;border-radius:11px;background:#f2f3f9;border:1px solid var(--line)}
+.wd-cards i:nth-child(1){background:linear-gradient(140deg,rgba(61,94,255,.14),rgba(151,99,255,.14));border-color:rgba(97,94,255,.3)}
+.wd-phone{
+  position:absolute;right:0;bottom:-26px;width:132px;
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px 9px 12px;
+  box-shadow:0 20px 44px rgba(56,56,120,.22);
+  transform:rotate(3deg);
+}
+.wd-phone::before{content:"";display:block;width:34px;height:4px;border-radius:2px;background:#e4e4ec;margin:0 auto 9px}
+.wd-screen{border:1px solid var(--line);border-radius:12px;padding:12px 10px;background:linear-gradient(170deg,rgba(61,94,255,.06),rgba(151,99,255,.08))}
+.wd-screen .wd-line{height:9px;margin-bottom:7px}
+.wd-screen .wd-line.thin{height:6px;margin-bottom:5px}
+.wd-screen .wd-btn{width:64px;height:18px;margin-top:8px}
+.wd-mini{display:flex;gap:6px;margin-top:10px}
+.wd-mini i{flex:1;height:30px;border-radius:7px;background:#fff;border:1px solid var(--line)}
+
 /* ---------- process (dark) ---------- */
 .process{background:var(--dark);color:#fff}
 .process .eyebrow{background:rgba(255,255,255,.04);border-color:var(--dark-line);color:rgba(255,255,255,.6)}
@@ -421,6 +466,8 @@ html.js .reveal.in{opacity:1;transform:none}
 @media(max-width:900px){
   .grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr;gap:44px}
+  .wd-grid{grid-template-columns:1fr;gap:52px}
+  .wd-visual{min-height:0;margin-bottom:20px}
   .nav-links{display:none}
   .dash-body{grid-template-columns:1fr}
   .dash-col.left{border-right:none;border-bottom:1px solid var(--line)}
@@ -455,6 +502,12 @@ html.js .reveal.in{opacity:1;transform:none}
   /* centered, airy mobile layout */
   .why-grid > div:first-child{text-align:center}
   .why-grid h2{text-align:center}
+  .wd-grid > div:first-child{text-align:center}
+  .wd-grid h2{text-align:center}
+  .wd-grid .eyebrow{margin-left:auto;margin-right:auto}
+  .wd-item{text-align:left}
+  .wd-browser{margin-right:36px}
+  .wd-phone{width:108px;bottom:-20px}
   .why-grid .eyebrow{margin-left:auto;margin-right:auto}
   .why-item{text-align:left}
   .why-visual{padding:28px 22px;min-height:340px}
@@ -475,6 +528,7 @@ html.js .reveal.in{opacity:1;transform:none}
     </a>
     <nav class="nav-links">
       <a href="#leistungen">Leistungen</a>
+      <a href="#webdesign">Webdesign</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#warum">Warum wir</a>
     </nav>
@@ -586,6 +640,57 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
+<section id="webdesign">
+  <div class="wrap wd-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span> Webdesign</div>
+      <h2>Websites, die nicht nur gut aussehen – <span class="hl">sondern verkaufen.</span></h2>
+      <p class="lead">Wir gestalten und bauen Ihre Website von Grund auf: modern, blitzschnell und von der ersten Zeile an auf Google und Anfragen optimiert. Ob Landingpage oder komplette Firmenwebsite – Sie bekommen alles aus einer Hand.</p>
+      <div class="wd-list">
+        <div class="wd-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Blitzschnell</b><span>Schlanker Code ohne Ballast – Ladezeiten, die Google und Besucher lieben.</span></div>
+        </div>
+        <div class="wd-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>SEO-ready ab Tag 1</b><span>Saubere Struktur, Meta-Daten, strukturierte Daten – die Website rankt von Anfang an.</span></div>
+        </div>
+        <div class="wd-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Mobile-first</b><span>Perfekt auf jedem Gerät – vom Smartphone bis zum großen Bildschirm.</span></div>
+        </div>
+        <div class="wd-item">
+          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <div><b>Auf Anfragen optimiert</b><span>Klare Struktur, überzeugende Texte, durchdachte Call-to-Actions – Besucher werden zu Kunden.</span></div>
+        </div>
+      </div>
+      <a class="btn grad" href="#kontakt">Website-Projekt anfragen <span class="arr">→</span></a>
+    </div>
+    <figure class="wd-visual reveal" aria-label="Beispiel: moderne Website auf Desktop und Smartphone">
+      <div class="wd-browser">
+        <div class="wd-top"><i></i><i></i><i></i><span class="wd-url">ihre-neue-website.de</span></div>
+        <div class="wd-hero">
+          <div class="wd-line w60"></div>
+          <div class="wd-line w40"></div>
+          <div class="wd-line thin w80"></div>
+          <div class="wd-line thin w70"></div>
+          <span class="wd-btn"></span>
+        </div>
+        <div class="wd-cards"><i></i><i></i><i></i></div>
+      </div>
+      <div class="wd-phone">
+        <div class="wd-screen">
+          <div class="wd-line w70"></div>
+          <div class="wd-line thin w90"></div>
+          <div class="wd-line thin w80"></div>
+          <span class="wd-btn"></span>
+          <div class="wd-mini"><i></i><i></i></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
 <section class="process" id="ablauf">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -680,6 +785,7 @@ html.js .reveal.in{opacity:1;transform:none}
     <a class="logo" href="#top"><svg class="logo-mark" viewBox="0 0 52 52" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5eff"/><stop offset="1" stop-color="#9763ff"/></linearGradient></defs><rect width="52" height="52" rx="15" fill="url(#lg2)"/><text x="6" y="39" font-family="Onest,Arial,sans-serif" font-weight="800" font-size="33" fill="#fff" letter-spacing="-2">K</text><text x="24.5" y="39" font-family="Onest,Arial,sans-serif" font-weight="800" font-size="33" fill="#fff" opacity=".55" letter-spacing="-2">D</text></svg> KD&nbsp;Marketing</a>
     <div class="foot-links">
       <a href="#leistungen">Leistungen</a>
+      <a href="#webdesign">Webdesign</a>
       <a href="#kontakt">Kontakt</a>
       <a href="/impressum/">Impressum</a>
       <a href="/datenschutz/">Datenschutz</a>
