@@ -48,6 +48,15 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:80px}
+a,button,summary{touch-action:manipulation}
+:focus-visible{outline:2.5px solid var(--blue);outline-offset:3px;border-radius:6px}
+h1,h2,h3{text-wrap:balance}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  html.js .reveal{opacity:1;transform:none}
+}
 body{
   font-family:var(--font);
   background:var(--paper);
@@ -670,32 +679,32 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="grid">
       <div class="card feature reveal">
         <span class="tag">Kernkompetenz</span>
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></div>
         <h3>SEO – Suchmaschinen&shy;optimierung</h3>
         <p>Technik, Inhalte, Backlinks: Wir bringen Ihre Website nachhaltig auf die vorderen Plätze – dort, wo geklickt wird.</p>
       </div>
       <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <h3>Google Maps &amp; Local SEO</h3>
         <p>Google-Unternehmensprofil, Bewertungen, lokale Rankings: Wir machen Sie zur ersten Wahl in Ihrer Stadt.</p>
       </div>
       <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
         <h3>Content-Marketing</h3>
         <p>Texte, die ranken und verkaufen: Landingpages, Blogartikel und Kategorietexte – strategisch geplant, sauber umgesetzt.</p>
       </div>
       <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h3a4 4 0 0 1 4 4v1h-2v-1a2 2 0 0 0-2-2h-3v2.6c1.2.6 2 1.9 2 3.4a4 4 0 1 1-8 0c0-1.5.8-2.8 2-3.4V13H7a2 2 0 0 0-2 2v1H3v-1a4 4 0 0 1 4-4h3V9.4C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4Z"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h3a4 4 0 0 1 4 4v1h-2v-1a2 2 0 0 0-2-2h-3v2.6c1.2.6 2 1.9 2 3.4a4 4 0 1 1-8 0c0-1.5.8-2.8 2-3.4V13H7a2 2 0 0 0-2 2v1H3v-1a4 4 0 0 1 4-4h3V9.4C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4Z"/></svg></div>
         <h3>KI-SEO / AI-Suche</h3>
         <p>ChatGPT, Perplexity &amp; Google AI Overviews: Wir optimieren Ihre Inhalte so, dass KI-Assistenten Sie empfehlen.</p>
       </div>
       <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
         <h3>Google Ads</h3>
         <p>Sofort sichtbare Ergebnisse mit bezahlten Kampagnen – effizient ausgesteuert, ohne Budget zu verbrennen.</p>
       </div>
       <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
         <h3>Websites &amp; Landingpages</h3>
         <p>Schnelle, konversionsstarke Seiten – technisch sauber, SEO-ready und auf jedem Gerät ein Hingucker.</p>
       </div>
@@ -711,19 +720,19 @@ html.js .reveal.in{opacity:1;transform:none}
       <p class="lead">Wir gestalten und bauen Ihre Website von Grund auf: modern, blitzschnell und von der ersten Zeile an auf Google und Anfragen optimiert. Ob Landingpage oder komplette Firmenwebsite – Sie bekommen alles aus einer Hand.</p>
       <div class="wd-list">
         <div class="wd-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Blitzschnell</b><span>Schlanker Code ohne Ballast – Ladezeiten, die Google und Besucher lieben.</span></div>
         </div>
         <div class="wd-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>SEO-ready ab Tag 1</b><span>Saubere Struktur, Meta-Daten, strukturierte Daten – die Website rankt von Anfang an.</span></div>
         </div>
         <div class="wd-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Mobile-first</b><span>Perfekt auf jedem Gerät – vom Smartphone bis zum großen Bildschirm.</span></div>
         </div>
         <div class="wd-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Auf Anfragen optimiert</b><span>Klare Struktur, überzeugende Texte, durchdachte Call-to-Actions – Besucher werden zu Kunden.</span></div>
         </div>
       </div>
@@ -799,19 +808,19 @@ html.js .reveal.in{opacity:1;transform:none}
       <h2>Wir reden nicht über Reichweite. <span class="hl">Wir liefern Anfragen.</span></h2>
       <div class="why-list">
         <div class="why-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Praxis statt Theorie</b><span>Wir betreiben eigene Projekte, die in umkämpften Märkten ranken – wir wissen, was wirklich funktioniert.</span></div>
         </div>
         <div class="why-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Direkter Draht</b><span>Kein Ticketsystem, kein Callcenter: Sie sprechen direkt mit den Menschen, die Ihr Projekt umsetzen.</span></div>
         </div>
         <div class="why-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Volle Transparenz</b><span>Monatliche Reports mit echten Kennzahlen: Rankings, Besucher, Anrufe, Anfragen. Sie sehen jederzeit, was Ihr Budget leistet.</span></div>
         </div>
         <div class="why-item">
-          <span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
+          <span class="check"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></span>
           <div><b>Faire Konditionen</b><span>Monatlich kündbar. Wir überzeugen mit Ergebnissen – nicht mit Knebelverträgen.</span></div>
         </div>
       </div>
@@ -835,19 +844,19 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="vs-grid">
       <div class="vs-card win reveal">
         <div class="vs-head"><b>KD Marketing</b><span class="vs-tag">So arbeiten wir</span></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Direkter Draht</b><span>Sie sprechen direkt mit den Menschen, die Ihr Projekt umsetzen.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Monatlich kündbar</b><span>Wir überzeugen mit Ergebnissen, nicht mit Vertragslaufzeiten.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Echte Kennzahlen</b><span>Reports mit Rankings, Besuchern, Anrufen und Anfragen.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Praxis statt Theorie</b><span>Eigene Projekte, die in umkämpften Märkten ranken.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Transparente Preise</b><span>Klare Leistungen, keine versteckten Extras.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Direkter Draht</b><span>Sie sprechen direkt mit den Menschen, die Ihr Projekt umsetzen.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Monatlich kündbar</b><span>Wir überzeugen mit Ergebnissen, nicht mit Vertragslaufzeiten.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Echte Kennzahlen</b><span>Reports mit Rankings, Besuchern, Anrufen und Anfragen.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Praxis statt Theorie</b><span>Eigene Projekte, die in umkämpften Märkten ranken.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></svg></i><div><b>Transparente Preise</b><span>Klare Leistungen, keine versteckten Extras.</span></div></div>
       </div>
       <div class="vs-card reveal">
         <div class="vs-head"><b>Typische Agentur</b><span class="vs-tag">Branchen-Standard</span></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Ticketsystem</b><span>Wechselnde Ansprechpartner und lange Antwortzeiten.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>12–24 Monate Laufzeit</b><span>Lange Knebelverträge, Ausstieg kaum möglich.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Bunte PDF-Reports</b><span>Viele Seiten, wenig Aussage über echte Anfragen.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Theorie aus Lehrbüchern</b><span>Empfehlungen ohne eigene nachweisbare Erfolge.</span></div></div>
-        <div class="vs-row"><i><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Versteckte Kosten</b><span>Extras und Aufschläge nach Vertragsstart.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Ticketsystem</b><span>Wechselnde Ansprechpartner und lange Antwortzeiten.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>12–24 Monate Laufzeit</b><span>Lange Knebelverträge, Ausstieg kaum möglich.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Bunte PDF-Reports</b><span>Viele Seiten, wenig Aussage über echte Anfragen.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Theorie aus Lehrbüchern</b><span>Empfehlungen ohne eigene nachweisbare Erfolge.</span></div></div>
+        <div class="vs-row"><i><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></i><div><b>Versteckte Kosten</b><span>Extras und Aufschläge nach Vertragsstart.</span></div></div>
       </div>
     </div>
   </div>
@@ -866,7 +875,7 @@ html.js .reveal.in{opacity:1;transform:none}
       </details>
       <details class="faq-item">
         <summary>Wie schnell sehe ich Ergebnisse?<span class="fx">+</span></summary>
-        <div class="faq-a">Ehrliche Antwort: Bei Google Maps und Local SEO oft schon nach wenigen Wochen, bei klassischem SEO meist nach 3–6 Monaten – nachhaltige Rankings brauchen Zeit. Google Ads liefern sofort Sichtbarkeit. Wer Ihnen „Platz 1 in 2 Wochen" verspricht, arbeitet mit Tricks, die Google früher oder später abstraft.</div>
+        <div class="faq-a">Ehrliche Antwort: Bei Google Maps und Local SEO oft schon nach wenigen Wochen, bei klassischem SEO meist nach 3–6 Monaten – nachhaltige Rankings brauchen Zeit. Google Ads liefern sofort Sichtbarkeit. Wer Ihnen „Platz 1 in 2 Wochen“ verspricht, arbeitet mit Tricks, die Google früher oder später abstraft.</div>
       </details>
       <details class="faq-item">
         <summary>Gibt es lange Vertragslaufzeiten?<span class="fx">+</span></summary>
@@ -896,7 +905,7 @@ html.js .reveal.in{opacity:1;transform:none}
       <div class="cta-actions">
         <a class="btn light" href="mailto:info@kd-marketing.com?subject=Anfrage%20kostenlose%20Analyse">Kostenlose Analyse anfordern <span class="arr">→</span></a>
         <button class="mail-chip" type="button" id="mail-copy" title="Klicken zum Kopieren">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7L22 7"/></svg>
           <span class="mail-addr">info@kd-marketing.com</span>
           <span class="mail-hint">kopieren</span>
         </button>
