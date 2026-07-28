@@ -13,10 +13,12 @@
 <link rel="stylesheet" href="/fonts/onest.css">
 <style>
 :root{
-  --ink:#0e0e0e;--ink-soft:#5b616e;--paper:#ffffff;--paper-soft:#f7f8fc;
-  --line:rgba(14,14,14,.09);--blue:#3d5eff;--violet:#9763ff;
+  --ink:#1c1633;--ink-soft:#655e7e;--paper:#fffdf8;--paper-soft:#f5f2ff;
+  --line:rgba(28,22,51,.1);--blue:#3d5eff;--violet:#9763ff;
   --grad:linear-gradient(112deg,#3d5eff 0%,#9763ff 100%);
-  --dark:#0e0e0e;
+  --dark:#1c1633;
+  --marker:#ffe24a;
+  --display:'Bricolage Grotesque','Onest',system-ui,sans-serif;
   --font:'Onest',system-ui,sans-serif;
   --mono:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
 }
@@ -34,14 +36,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdro
 .logo-mark{width:38px;height:38px;border-radius:12px;display:block;flex:0 0 auto;box-shadow:0 6px 18px rgba(97,94,255,.35)}
 .nav-links{display:flex;gap:32px;font-weight:600;font-size:15px;color:var(--ink-soft)}
 .nav-links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--grad);color:#fff;font-weight:700;font-size:15px;padding:13px 26px;border-radius:14px;box-shadow:0 8px 24px rgba(97,94,255,.38);transition:transform .2s,filter .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--violet);color:#fff;font-weight:700;font-size:15px;padding:13px 26px;border-radius:999px;box-shadow:0 8px 24px rgba(97,94,255,.38);transition:transform .2s,filter .2s}
 .btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
 main{padding:72px 0 96px}
 .legal{max-width:760px}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:8px 18px;border-radius:999px;box-shadow:0 2px 10px rgba(14,14,14,.05);margin-bottom:26px}
 .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--grad)}
-h1{font-weight:800;font-size:clamp(34px,4.6vw,52px);letter-spacing:-.03em;line-height:1.1;margin-bottom:36px}
-h2{font-weight:800;font-size:21px;letter-spacing:-.015em;margin:40px 0 12px}
+h1{font-family:var(--display);font-weight:780;font-size:clamp(34px,4.6vw,52px);letter-spacing:-.028em;line-height:1.06;margin-bottom:36px}
+h2{font-family:var(--display);font-weight:740;font-size:21px;letter-spacing:-.012em;margin:40px 0 12px}
 p{margin:0 0 14px;color:#333941}
 .legal a{color:var(--blue);font-weight:600}
 .legal a:hover{text-decoration:underline}
@@ -141,9 +143,10 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:44px 0;font-si
     <div>© 2026 KD Marketing</div>
   </div>
   <div class="wrap">
-    <p class="nocookie">🍪 Diese Website kommt komplett ohne Cookies und Tracking aus – deshalb gibt es hier auch kein Cookie-Banner. <a href="/datenschutz/">Mehr dazu im Datenschutz</a>.</p>
+    <p class="nocookie">🍪 Diese Website kommt komplett ohne Cookies aus – nur eine cookielose, anonyme Reichweitenmessung. Deshalb gibt es hier auch kein Cookie-Banner. <a href="/datenschutz/">Mehr dazu im Datenschutz</a>.</p>
   </div>
 </footer>
 
+<!-- Cloudflare Web Analytics (cookielos, siehe Datenschutz Ziff. 5) --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "807c49d5d8184582b12e681dba7c41f8"}'></script>
 </body>
 </html>
