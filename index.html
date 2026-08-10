@@ -130,18 +130,6 @@ header{
     radial-gradient(460px 340px at 84% 22%,rgba(61,94,255,.13),transparent 70%),
     radial-gradient(380px 300px at 70% 78%,rgba(255,226,74,.22),transparent 70%);
 }
-.stick{
-  position:absolute;z-index:3;
-  font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-.01em;
-  background:#fff;border:1.5px solid var(--line);border-radius:14px;
-  padding:9px 15px;box-shadow:0 10px 24px rgba(28,22,51,.12);
-  pointer-events:none;
-}
-.stick.s1{top:118px;left:4%;transform:rotate(-7deg);background:#f0ecff}
-.stick.s2{top:96px;right:5%;transform:rotate(5deg);background:#fff3b8}
-.stick.s3{top:330px;right:2%;transform:rotate(-4deg)}
-.stick.s4{top:390px;left:2.5%;transform:rotate(4deg);background:#e7f9ee}
-@media(max-width:1100px){.stick{display:none}}
 .hero .wrap{position:relative}
 h1{
   font-family:var(--display);
@@ -450,7 +438,6 @@ h2{
   background:#fff;border:1px solid var(--line);border-radius:999px;
   padding:9px 16px;font-size:13px;font-weight:700;letter-spacing:-.01em;
   box-shadow:0 10px 26px rgba(56,56,120,.16);
-  transform:rotate(2deg);
 }
 .avail .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.5);animation:availpulse 1.8s infinite}
 @keyframes availpulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
@@ -628,10 +615,6 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <section class="hero" id="top">
   <div class="hero-glow"></div>
-  <span class="stick s1">💜 Direkter Draht</span>
-  <span class="stick s2">✏️ Erstanalyse gratis</span>
-  <span class="stick s3">🗓 monatlich kündbar</span>
-  <span class="stick s4">✓ 100 % transparent</span>
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> Digital-Marketing-Agentur</div>
     <h1>Mehr Sichtbarkeit. Mehr Kunden. <span class="hl">Messbar mehr Umsatz.</span></h1>
