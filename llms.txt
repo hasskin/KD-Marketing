@@ -32,5 +32,11 @@ Contact: info@kd-marketing.com (reply within 24 hours)
 ## Pages
 
 - [Home](https://kd-marketing.com/): services, process, contact
+- [SEO](https://kd-marketing.com/seo/): search engine optimization service
+- [Local SEO / Google Maps](https://kd-marketing.com/local-seo/): Google Business Profile & local rankings
+- [Content marketing](https://kd-marketing.com/content-marketing/): landing pages, guides, blog articles
+- [AI SEO](https://kd-marketing.com/ki-seo/): visibility in ChatGPT, Perplexity & AI Overviews
+- [Google Ads](https://kd-marketing.com/google-ads/): paid search campaigns
+- [Webdesign](https://kd-marketing.com/webdesign/): fast, conversion-focused websites
 - [Impressum](https://kd-marketing.com/impressum/)
 - [Privacy policy](https://kd-marketing.com/datenschutz/)
