@@ -23,7 +23,7 @@
 <link rel="preload" href="/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/onest.css">
 <script type="application/ld+json" id="kd-localbusiness">
-{"@context":"https:\/\/schema.org","@type":"ProfessionalService","@id":"https:\/\/kd-marketing.com\/#organization","name":"KD Marketing UG (haftungsbeschränkt)","alternateName":"KD Marketing","url":"https:\/\/kd-marketing.com\/","logo":"https:\/\/kd-marketing.com\/apple-touch-icon.png","image":"https:\/\/kd-marketing.com\/og-image.png","description":"Digital-Marketing-Agentur für SEO, Content-Marketing, Google Maps \/ Local SEO, KI-SEO, Google Ads und Websites. Kostenlose Erstanalyse, monatlich kündbar, transparentes Reporting.","email":"info@kd-marketing.com","address":{"@type":"PostalAddress","streetAddress":"Aldeinerstraße 2","postalCode":"86368","addressLocality":"Gersthofen","addressCountry":"DE"},"founder":{"@type":"Person","name":"Ekaterina Dmitrieva"},"areaServed":"DE","priceRange":"€€","knowsAbout":["SEO","Suchmaschinenoptimierung","Local SEO","Google Maps Marketing","Content-Marketing","KI-SEO","Google Ads","Webdesign"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Leistungen","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO – Suchmaschinenoptimierung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Maps & Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Content-Marketing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"KI-SEO \/ AI-Suche"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Websites & Landingpages"}}]}}
+{"@context":"https:\/\/schema.org","@type":"ProfessionalService","@id":"https:\/\/kd-marketing.com\/#organization","name":"KD Marketing UG (haftungsbeschränkt)","alternateName":"KD Marketing","url":"https:\/\/kd-marketing.com\/","logo":"https:\/\/kd-marketing.com\/apple-touch-icon.png","image":"https:\/\/kd-marketing.com\/og-image.png","description":"Digital-Marketing-Agentur für SEO, Content-Marketing, Google Maps \/ Local SEO, KI-SEO, Google Ads und Websites. Kostenlose Erstanalyse, monatlich kündbar, transparentes Reporting.","email":"info@kd-marketing.com","address":{"@type":"PostalAddress","streetAddress":"Aldeinerstraße 2","postalCode":"86368","addressLocality":"Gersthofen","addressCountry":"DE"},"founder":{"@type":"Person","name":"Ekaterina Dmitrieva"},"areaServed":"DE","priceRange":"€€","knowsAbout":["SEO","Suchmaschinenoptimierung","Local SEO","Google Maps Marketing","Content-Marketing","KI-SEO","Google Ads","Webdesign"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Leistungen","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO – Suchmaschinenoptimierung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Maps & Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bewertungs-Management & Löschung unberechtigter Bewertungen"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Content-Marketing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"KI-SEO \/ AI-Suche"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Websites & Landingpages"}}]}}
 </script>
 <script type="application/ld+json" id="kd-faq-schema">
 {"@context":"https:\/\/schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was kostet die Zusammenarbeit mit KD Marketing?","acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Umfang ab – eine lokale Google-Maps-Optimierung kostet weniger als eine komplette SEO-Betreuung mit Content. Sie erhalten vorab ein transparentes Festpreis-Angebot ohne versteckte Extras, die Zusammenarbeit ist monatlich kündbar. Die Erstanalyse ist immer kostenlos."}},{"@type":"Question","name":"Wie schnell sehe ich Ergebnisse?","acceptedAnswer":{"@type":"Answer","text":"Bei Google Maps und Local SEO oft schon nach wenigen Wochen, bei klassischem SEO meist nach 3–6 Monaten – nachhaltige Rankings brauchen Zeit. Google Ads liefern sofort Sichtbarkeit."}},{"@type":"Question","name":"Gibt es lange Vertragslaufzeiten?","acceptedAnswer":{"@type":"Answer","text":"Nein. Die Verträge von KD Marketing sind monatlich kündbar."}},{"@type":"Question","name":"Für wen arbeitet KD Marketing?","acceptedAnswer":{"@type":"Answer","text":"Vor allem für kleine und mittlere Unternehmen in Deutschland: Praxen, Kanzleien, Handwerksbetriebe, lokale Dienstleister und Online-Unternehmen."}},{"@type":"Question","name":"Was steht im monatlichen Report?","acceptedAnswer":{"@type":"Answer","text":"Echte Kennzahlen: Rankings, Besucherzahlen, Anrufe und Anfragen – und die konkret umgesetzten Maßnahmen des Monats."}},{"@type":"Question","name":"Was beinhaltet die kostenlose Erstanalyse?","acceptedAnswer":{"@type":"Answer","text":"Prüfung von Website, Google-Rankings, Google-Unternehmensprofil und Wettbewerb. Ergebnis ist ein Audit-Report mit klaren Prioritäten – unverbindlich und kostenlos, Antwort innerhalb von 24 Stunden."}}]}
@@ -290,6 +290,11 @@ h2{
 .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;font-size:14px;color:var(--violet)}
 .card-link:hover{gap:10px}
 .card.feature .card-link{color:#fff}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:8px 26px;align-items:center;border:1.5px solid rgba(151,99,255,.4);box-shadow:0 14px 36px rgba(151,99,255,.12)}
+.card.wide .icon{margin-bottom:0}
+.card.wide .card-link{margin-top:0;white-space:nowrap}
+.card.wide .new{display:inline-block;vertical-align:3px;margin-left:8px;font-size:11.5px;font-weight:700;background:var(--marker);color:var(--ink);padding:3px 10px;border-radius:999px}
+@media(max-width:600px){.card.wide{grid-template-columns:1fr}.card.wide .icon{margin-bottom:12px}.card.wide .card-link{margin-top:6px}}
 .card.feature{
   background:var(--violet);
   color:#fff;
@@ -722,6 +727,14 @@ html.js .reveal.in{opacity:1;transform:none}
         <h3>Websites &amp; Landingpages</h3>
         <p>Schnelle, konversionsstarke Seiten – technisch sauber, SEO-ready und auf jedem Gerät ein Hingucker.</p>
         <a class="card-link" href="/webdesign/">Mehr erfahren <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="card wide reveal">
+        <div class="icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.8L6.6 19.7l1-6-4.4-4.3 6.1-.9Z"/></svg></div>
+        <div class="wide-txt">
+          <h3>Negative Bewertungen löschen lassen <span class="new">Neu</span></h3>
+          <p>Unfaire 1-Sterne-Bewertung bei Google? Gefälschte und unberechtigte Bewertungen lassen wir löschen – und bauen parallel echte 5-Sterne-Bewertungen auf. Mit ehrlichem Gratis-Check Ihrer Chancen.</p>
+        </div>
+        <a class="card-link" href="/bewertungen-loeschen/">Mehr erfahren <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
